@@ -9,7 +9,7 @@ import org.lognet.springboot.grpc.GRpcService;
 
 @GRpcService
 public class Grpcserver extends StudentServiceGrpc.StudentServiceImplBase {
-    StudentResponse response = StudentResponse.newBuilder().setAge(10).setName("Anubhav").build();
+    StudentResponse response = StudentResponse.newBuilder().setAge(10).setName("Anubhav").setBranch("CS").build();
 
     @Override
     public void getStudent(StudentRequest request, StreamObserver<StudentResponse> responseObserver) {
